@@ -1,0 +1,23 @@
+#!/bin/bash
+
+filesize=$(du -sk "$1" | awk '{print $1}')
+
+if [ "$2" -lt 0 ];
+
+then
+
+echo "Negative number to compare">&2
+
+echo "Negative number to compare"
+
+elif [ "$filesize" -lt "$2" ];
+
+then
+
+echo File or directory "$1" is smaller than "$2" kb
+
+else
+
+echo File or directory "$1" is not smaller than "$2" kb
+
+fi
